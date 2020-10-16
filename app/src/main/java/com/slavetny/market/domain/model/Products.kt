@@ -1,8 +1,5 @@
 package com.slavetny.market.domain.model
 
-import androidx.room.Entity
-import androidx.room.PrimaryKey
-
 data class Products(
     val campaigns: Campaigns,
     val categoryName: String,

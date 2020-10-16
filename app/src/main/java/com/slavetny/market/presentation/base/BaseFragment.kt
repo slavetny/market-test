@@ -4,11 +4,7 @@ import android.os.Bundle
 import android.view.*
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.ItemTouchHelper
-import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
-import com.slavetny.market.R
 import com.slavetny.market.domain.extensions.observeNotNull
 
 abstract class BaseFragment<VM : BaseViewModel, T : ViewBinding> : Fragment() {
