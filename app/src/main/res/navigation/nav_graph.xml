@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/productList">
+
+    <fragment
+        android:id="@+id/productList"
+        android:label="Product List Fragment"
+        android:name="com.slavetny.market.presentation.screen.productlist.ProductListFragment"
+        tools:layout="@layout/fragment_productlist" >
+
+        <action
+            android:id="@+id/action_productList_to_cartFragment"
+            app:destination="@id/cart" />
+
+        <action
+            android:id="@+id/action_productList_to_about"
+            app:destination="@id/about" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/cart"
+        android:label="Cart Fragment"
+        android:name="com.slavetny.market.presentation.screen.cart.CartFragment"
+        tools:layout="@layout/fragment_cart" >
+
+        <argument
+            android:name="Product"
+            app:argType="com.slavetny.market.domain.model.Product"
+            app:nullable="false" />
+
+        <action
+            android:id="@+id/action_cartFragment_to_productList"
+            app:destination="@id/productList" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/about"
+        android:label="About Fragment"
+        android:name="com.slavetny.market.presentation.screen.about.AboutFragment"
+        tools:layout="@layout/fragment_about" />
+
+</navigation>
